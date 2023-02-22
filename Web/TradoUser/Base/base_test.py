@@ -33,7 +33,7 @@ class BaseSetups():
         date = Select(self.find(path, locate))
         date.select_by_visible_text(choose)
 
-    def wait_until_element_is_visible(self, by, locate, time: int = 40):
+    def wait_until_element_is_visible(self, by, locate, time: int = 10):
         wait = WebDriverWait(self.driver, time)
         wait.until(ec.visibility_of_element_located((by, locate)))
 
@@ -41,9 +41,6 @@ class BaseSetups():
         self.wait_until_element_is_visible(path, error_path)
         return self.find(path, error_path).text
 
-    def Alert(self, text):
-        self.wait_until_element_is_visible(text)
-        return self.driver.switch_to.alert.accept()
 
     def message(self, error_path, locate):
         self.wait_until_element_is_visible(error_path, locate)
@@ -74,3 +71,5 @@ class BaseSetups():
     def scroll_bar(self, by, locate):
         self.wait_until_element_is_visible(by, locate)
         self.driver.execute_script("window.scrollBy(0, Document.body.scrollHeight)")
+        self.driver.execute_script("window.scrollBy(0, 1000)")
+
