@@ -1,7 +1,7 @@
 class Xpath_bussiness:
     TRADO_ADMIN = "https://qa-admin.trado.co.il/#/login"
     QA_TRADO_URL = "https://qa.trado.co.il/"
-    CONNECT = "//*[@id='root']/div/div[4]/div/span/i"
+    CONNECT_BUSSINESS = "//*[@id='root']/div/div[4]/div/span/i"
     BUSSINESS_LINK = "//a[contains(text(),'ממשק עסקים')]"
     FRIST_NAME = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/form[1]/div[1]/div[1]/span[1]/input[1]"
     SUR_NAME = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/form[1]/div[1]/div[2]/span[1]/input[1]"
@@ -16,6 +16,8 @@ class Xpath_bussiness:
     STREET = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/form[1]/div[2]/div[1]/div[1]/div[2]/span[1]/input[1]"
     CITY = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/form[1]/div[2]/div[1]/div[1]/div[1]/span[1]/input[1]"
     SUBMIT = "form_submitBtn"
+
+
 
     # assertion
     APPROVE_OUR_POLICY = "//div[contains(text(),'please approve our policy')]"
