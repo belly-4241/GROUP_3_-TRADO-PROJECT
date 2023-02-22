@@ -270,3 +270,6 @@ class ALL_TESTS_CONTACT_US(BaseSetups, Xpath_contact_us):
         self.click(By.CLASS_NAME, self.SEND_BUTTON)
         assert self.assertion(By.XPATH, self.ERROR_FIRST_NAME) == "נא למלא שדה זה"
 
+
+
+

@@ -94,3 +94,6 @@ class ALL_TESTS_FOOTER_LINKS(BaseSetups, Xpath_footer_links):
         self.click(By.XPATH, self.CONNECT)
         self.scroll_down()
         self.click(By.XPATH, self.WHATS_APP)
+
+
+

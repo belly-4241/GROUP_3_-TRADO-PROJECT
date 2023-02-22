@@ -196,3 +196,6 @@ class Test_RUN(ALL_TESTS_BUSSINESS):
         bussiness_interface = ALL_TESTS_BUSSINESS()
         bussiness_interface.test_invalid_insert_all_data_correctly_except_House_field_Numbermix_number_with_letter_then_click_on_submit_button()
         bussiness_interface.tear_down()
+
+
+

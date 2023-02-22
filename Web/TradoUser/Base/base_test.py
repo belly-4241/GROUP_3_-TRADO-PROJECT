@@ -76,3 +76,5 @@ class BaseSetups():
     def scroll_down(self):
         self.driver.execute_script("window.scrollBy(0,1000)")
         self.driver.execute_script("window.scrollBy(0,1000)")
+
+

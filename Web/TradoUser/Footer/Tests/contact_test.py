@@ -164,3 +164,6 @@ class Test_RUN(ALL_TESTS_CONTACT_US):
     def test_invalid_insert_all_data_except_the_email_and_fist_name_field_null_then_click_on_send_button(self):
         contactus = ALL_TESTS_CONTACT_US()
         contactus.test_invalid_insert_all_data_except_the_email_and_fist_name_field_null_then_click_on_send_button()
+
+
+

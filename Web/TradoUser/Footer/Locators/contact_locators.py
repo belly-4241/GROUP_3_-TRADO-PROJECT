@@ -9,6 +9,8 @@ class Xpath_contact_us:
     REFERANCE_MESSAGE = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/form[1]/div[1]/div[5]/textarea[1]"
     SEND_BUTTON = "form_submitBtn"
     ASSERTION_SUCCESFULLY = "//div[contains(text(),'הפרטים נקלטו בהצלחה')]"
+
+
     ### assertion Error message
     SUCCESSFULLY_MESSAGE = "/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/form[1]/div[3]"
     ERROR_FIRST_NAME = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/form[1]/div[1]/div[1]/div[1]"

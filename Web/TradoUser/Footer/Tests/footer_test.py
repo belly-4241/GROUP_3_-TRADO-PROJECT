@@ -131,3 +131,5 @@ class Test_RUN(ALL_TESTS_FOOTER_LINKS):
         whats_up = ALL_TESTS_FOOTER_LINKS()
         whats_up.Validating_click_on_whats_app_new_page_will_be_display()
         whats_up.tear_down()
+
+

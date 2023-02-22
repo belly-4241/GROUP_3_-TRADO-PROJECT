@@ -31,3 +31,6 @@ class Xpath_bussiness:
     INVALID_PHONE = "div.pages_pages div.pages_children.false:nth-child(3) div.joinUs_contactContainer:nth-child(2) div.joinUs_contactMain:nth-child(2) form.form_form.form_contactForm.contactForm div.form_items:nth-child(1) div.form_formItem.undefined.undefined.false.undefined:nth-child(6) > div.form_note:nth-child(3)"
     INVALID_EMAILS = "//div[contains(text(),'דוא״ל לא תקין')]"
 
+
+
+

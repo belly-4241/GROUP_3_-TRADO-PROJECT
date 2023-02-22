@@ -422,3 +422,6 @@ class ALL_TESTS_BUSSINESS(BaseSetups, Xpath_bussiness):
         self.click(By.CLASS_NAME, self.SUBMIT)
         assert self.assertion(By.XPATH, self.APPROVE_OUR_POLICY) == "Please Approve Our Policy"
 
+
+
+
