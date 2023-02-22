@@ -1,7 +1,7 @@
 class Xpath_cannabis:
     TRADO_ADMIN = 'https://qa-admin.trado.co.il/#/login'
     QA_TRADO_URL = "https://qa.trado.co.il/"
-    CONNECT = "//*[@id='root']/div/div[4]/div/span/i"
+    CANNABIS_CONNECT = "//*[@id='root']/div/div[4]/div/span/i"
     CANNABIS = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/a[2]"
     SORTING = "div.pages_pages div.pages_children.false:nth-child(3) div.store_store div.store_productsList:nth-child(2) div.productsList_productsList div.productsList_productListWrapper div.productsList_btnsRow div.productsList_sort:nth-child(3) div.select_select:nth-child(2) > select:nth-child(1)"
     SORTINGPRICE_LOW = "div.pages_pages div.pages_children.false:nth-child(3) div.store_store div.store_productsList:nth-child(2) div.productsList_productsList div.productsList_productListWrapper div.productsList_btnsRow div.productsList_sort:nth-child(3) div.select_select:nth-child(2) select:nth-child(1) > option:nth-child(2)"
