@@ -5,9 +5,11 @@ from selenium.webdriver.remote import webelement
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.color import Color
 from selenium.webdriver.support.wait import WebDriverWait
+from Web.TradoAdmin.Dashboard.locators import dashboard_Locator
+from Web.TradoAdmin.Department.locators import department_Locator
+from Web.TradoAdmin.Order.locators import order_locator_click
 
-
-class BaseSetups():
+class BaseSetups(dashboard_Locator,department_Locator,order_locator_click):
     driver = webdriver.Chrome()
 
     def setup_trado(self):
