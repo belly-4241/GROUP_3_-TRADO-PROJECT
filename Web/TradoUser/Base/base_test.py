@@ -33,17 +33,17 @@ class BaseSetups():
         date = Select(self.find(path, locate))
         date.select_by_visible_text(choose)
 
-    def wait_until_element_is_visible(self, by, locate, time: int = 40):
+    def wait_until_element_is_visible(self, by, locate, time: int = 10):
         wait = WebDriverWait(self.driver, time)
         wait.until(ec.visibility_of_element_located((by, locate)))
+
+    def clear(self, path, locator):
+        self.wait_until_element_is_visible(path, locator)
+        self.find(path, locator).clear()
 
     def assertion(self, path, error_path):
         self.wait_until_element_is_visible(path, error_path)
         return self.find(path, error_path).text
-
-    def Alert(self, text):
-        self.wait_until_element_is_visible(text)
-        return self.driver.switch_to.alert.accept()
 
     def message(self, error_path, locate):
         self.wait_until_element_is_visible(error_path, locate)
@@ -63,8 +63,6 @@ class BaseSetups():
         assert popup in alert.text
         alert.accept()
 
-    # def alert_try(self):
-    #
 
     def color_check_up(self, by, locate):
         category_color = self.find(by, locate).value_of_css_property('background-color')
@@ -74,3 +72,7 @@ class BaseSetups():
     def scroll_bar(self, by, locate):
         self.wait_until_element_is_visible(by, locate)
         self.driver.execute_script("window.scrollBy(0, Document.body.scrollHeight)")
+
+    def scroll_down(self):
+        self.driver.execute_script("window.scrollBy(0,1000)")
+        self.driver.execute_script("window.scrollBy(0,1000)")
