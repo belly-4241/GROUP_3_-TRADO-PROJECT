@@ -1,0 +1,27 @@
+class Xpath_cannabis:
+    TRADO_ADMIN = 'https://qa-admin.trado.co.il/#/login'
+    QA_TRADO_URL = "https://qa.trado.co.il/"
+    CONNECT = "//*[@id='root']/div/div[4]/div/span/i"
+    CANNABIS = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/a[2]"
+    SORTING = "div.pages_pages div.pages_children.false:nth-child(3) div.store_store div.store_productsList:nth-child(2) div.productsList_productsList div.productsList_productListWrapper div.productsList_btnsRow div.productsList_sort:nth-child(3) div.select_select:nth-child(2) > select:nth-child(1)"
+    SORTINGPRICE_LOW = "div.pages_pages div.pages_children.false:nth-child(3) div.store_store div.store_productsList:nth-child(2) div.productsList_productsList div.productsList_productListWrapper div.productsList_btnsRow div.productsList_sort:nth-child(3) div.select_select:nth-child(2) select:nth-child(1) > option:nth-child(2)"
+    SORTINGPRICE_HIGH = " div.pages_pages div.pages_children.false:nth-child(3) div.store_store div.store_productsList:nth-child(2) div.productsList_productsList div.productsList_productListWrapper div.productsList_btnsRow div.productsList_sort:nth-child(3) div.select_select:nth-child(2) select:nth-child(1) > option:nth-child(3)"
+    GRID_VIEW = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[4]/span[2]/i[1]"
+    LIST_VIEW = "div.pages_pages div.pages_children.false:nth-child(3) div.store_store div.store_productsList:nth-child(2) div.productsList_productsList div.productsList_productListWrapper div.productsList_btnsRow div.productsList_layout:nth-child(4) span.icon_wrapper:nth-child(1) > i.micon-lines-o.icon_icon"
+    ACADIA_PRODUCT = "//div[contains(text(),'אקדיה')]"
+    ADD_BUTTON = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/span[1]/i[1]"
+    ACADIA_PRODUCT_CART = "//div[contains(text(),'אקדיה')]"
+    CLEAR_PRODUCT_CART = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/a[1]/div[1]/div[2]/div[3]/div[1]/div[1]/span[2]/i[1]"
+    QUANTITY = "//span[contains(text(),'כמות במלאי')]"
+    KUSH_LEMON_OIL_PRODUCT = "//div[contains(text(),'שמן למון קוש')]"
+    OG_KUSH_PRODUCT = "//div[contains(text(),'OG Kush')]"
+    LEMON_KUSH_PRODUCT = "//div[contains(text(),'למון קוש או.ג'י' (Lemon Kush OG)')]"
+    GORILA_GALU_PRODUCT = "//div[contains(text(),'גורילה גלו')]"
+    SHPLANT_PRODUCT = "//div[contains(text(),'האש פלאנט (Hashplant)')]"
+    KIVIAN_PRODUCT = "/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/a[9]/div[1]/div[2]/div[2]/div[1]"
+    SHEME_ALPHA_PRODUCT = "//div[contains(text(),'שמן אלפא פורטה')]"
+    SHEME_ALPHA_MIYELED_PRODUCT = "//div[contains(text(),'שמן אלפא מילד')]"
+    ULTRA_PRODUCT = "//div[contains(text(),'אולטרה סאוור (𝗨𝗟𝗧𝗥𝗔 𝗦𝗢𝗨𝗥)')]"
+    NEXT_BUTTON = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/button[2]"
+
+
