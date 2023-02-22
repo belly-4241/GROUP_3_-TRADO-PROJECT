@@ -1,7 +1,7 @@
 class Xpath_footer_links:
     TRADO_ADMIN = "https://qa-admin.trado.co.il/#/login"
     QA_TRADO_URL = "https://qa.trado.co.il/"
-    CONNECT = "//*[@id='root']/div/div[4]/div/span/i"
+    CONNECT_FOOTER = "//*[@id='root']/div/div[4]/div/span/i"
     WHO_WE_ARE = "//a[contains(text(),'מי אנחנו')]"
     MY_ACCOUNT = "//a[contains(text(),'החשבון שלי')]"
     E_TRADO = "//a[contains(text(),'eTrado')]"
@@ -22,6 +22,9 @@ class Xpath_footer_links:
     FACEBOO_NIGAUT = "//body/div[@id='u_0_1_h8']/div[@id='globalContainer']/div[@id='content']/div[1]/div[1]/div[1]/div[1]/div[1]/img[1]"
     TWITTER_NIGAUT = "//span[contains(text(),'Beyene Shachar')]"
     INSATA_NIGAUT = "//span[contains(text(),'Beyene Shachar')]"
+
+
+
 
 
 

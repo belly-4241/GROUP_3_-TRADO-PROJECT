@@ -457,5 +457,4 @@ class TestImportants(BaseSetups, Locators):
         # self.fields(By.XPATH, self.MAX_EMAIL, "abcde@gmail.com")
         # self.checkbox(By.XPATH, self.CHECK_BOX_ACCEPT)
         # self.click(By.XPATH, self.BUTTON_FORWARD)
-        #
-        #
+

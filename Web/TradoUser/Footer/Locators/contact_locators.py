@@ -1,6 +1,6 @@
 class Xpath_contact_us:
     QA_TRADO_URL = "https://qa.trado.co.il/"
-    CONNECT = "//*[@id='root']/div/div[4]/div/span/i"
+    CONNECT_CONTACT = "//*[@id='root']/div/div[4]/div/span/i"
     CONTACT_US_LINK = "//a[contains(text(),'צור קשר')]"
     FRIST_NAME = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/form[1]/div[1]/div[1]/span[1]/input[1]"
     SURNAME = "div.pages_pages div.pages_children.false:nth-child(3) div.contact_contactContainer:nth-child(2) div.contact_contactMain:nth-child(2) form.form_form.form_contactForm.contactForm div.form_items:nth-child(1) div.form_formItem.undefined.undefined.false.undefined:nth-child(2) span.input_input:nth-child(2) > input:nth-child(1)"
@@ -9,6 +9,7 @@ class Xpath_contact_us:
     REFERANCE_MESSAGE = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/form[1]/div[1]/div[5]/textarea[1]"
     SEND_BUTTON = "form_submitBtn"
     ASSERTION_SUCCESFULLY = "//div[contains(text(),'הפרטים נקלטו בהצלחה')]"
+
 
 
     ### assertion Error message
