@@ -78,13 +78,10 @@ class TestImportants(BaseSetups, Locators):
         self.fields(By.XPATH, self.BN_NUMBER, "515074946")
         self.checkbox(By.XPATH, self.REMIND_ME_BOX)
         self.click(By.XPATH, self.CONNECT_REGISTER_BTN)
-        self.fields(By.XPATH, self.LOGIN_CODE5, "")
-        self.fields(By.XPATH, self.LOGIN_CODE4, "")
-        self.fields(By.XPATH, self.LOGIN_CODE3, "")
-        self.fields(By.XPATH, self.LOGIN_CODE2, "")
-        self.fields(By.XPATH, self.LOGIN_CODE1, "")
+        self.fields(By.XPATH, self.LOGIN_CODE1, self.code_registration())
         self.click(By.XPATH, self.ACCEPT_CODE_REGISTER)
-
+        self.click(By.XPATH, self.REGI_STER)
+        self.click(By.XPATH, self.REGI_CLICK)
     def test_contact_us(self):
         self.setup_trado()
         self.click(By.XPATH, self.COCTAIL)
@@ -145,7 +142,9 @@ class TestImportants(BaseSetups, Locators):
         self.click(By.XPATH, self.SEND_REQUEST)
         assert self.assertion(By.XPATH, self.ACCEPT_POLICY_LTD) == 'Please Approve Our Policy'
 
-    def test_business_invalid_name(self):
+    @pytest.mark.parametrize("ltd_name, ltd_last, ltd_bnnumber, ltd_business_name, selector, your_phone,email_ltd, city_ltd,street_ltd, house_no, message",
+                             [('', 'two', '51426389', '0521234568', 'we love it', 'נא למלא שדה זה'),])
+    def test_business_invalid_name(self, ltd_name, ltd_last, ltd_bnnumber, ltd_business_name, selector, your_phone,email_ltd, city_ltd,street_ltd, house_no, message ):
         self.setup_trado()
         self.click(By.XPATH, self.COCTAIL)
         self.click(By.XPATH, self.SAVE)
@@ -438,24 +437,4 @@ class TestImportants(BaseSetups, Locators):
         self.click(By.XPATH, self.HOW_TO_SEND)
         self.color_check_up(By.XPATH, self.color)
 
-    def test_solution_payment(self):
-        self.setup_trado()
-        self.click(By.XPATH, self.COCTAIL)
-        self.click(By.XPATH, self.SAVE)
-        self.click(By.XPATH, self.SOLUTION_PAYMENT)
-        # self.home_page_extra(self.MAX_CARD)
-        self.click(By.XPATH, self.CARD_ORDER)
-        # self.home_page_extra(self.max_page)
-        # time.sleep(42)
-        # self.fields(By.XPATH, self.SURE_NAME, "RICH")
-        # self.fields(By.XPATH, self.LAST_NAME_CARD, "MAN")
-        # self.fields(By.XPATH, self.PERSONAL_ID, "353546987")
-        # self.click(By.XPATH, self.GENDER)
-        # self.fields(By.ID, self.BIRTHDATE, "03/08/1992")
-        # self.fields(By.XPATH, self.TELEPHONE_PERSONAL, "12345678")
-        # self.fields(By.XPATH, self.HOUSE_PHONE, "073456789")
-        # self.fields(By.XPATH, self.MAX_EMAIL, "abcde@gmail.com")
-        # self.checkbox(By.XPATH, self.CHECK_BOX_ACCEPT)
-        # self.click(By.XPATH, self.BUTTON_FORWARD)
-        #
-        #
+

@@ -1,9 +1,7 @@
 import allure
 import pytest
 import requests
-from pymongo import MongoClient
 
-from Web.TradoUser.Base.base_test import BaseSetups
 from Web.TradoUser.Payment.Locators.locators import Locators
 
 
