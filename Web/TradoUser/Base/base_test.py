@@ -1,4 +1,5 @@
 import random
+import time
 
 from pymongo import MongoClient
 from selenium.webdriver import Keys
@@ -57,9 +58,6 @@ class BaseSetups(Locators):
 
     def tear_down(self):
         self.driver.quit()
-        # Mockmock1 = CreateMock()
-        # self.MockManager.Verify()
-        # self.MockManager.ClearAll()
 
     def alert_ok_button(self, popup, time: int = 10):
         wait = WebDriverWait(self.driver, time)
@@ -100,8 +98,6 @@ class BaseSetups(Locators):
         for reset in results:
             login_code = (reset['loginCode'])
             return login_code
-
-
 
     def up_down_scroll(self):
         return self.fields(By.XPATH, self.BN_NUMBER_UP, Keys.END)
@@ -217,7 +213,7 @@ class BaseSetups(Locators):
         db_client = MongoClient(cluster)
         db = db_client['trado_qa']
         collection = db['users']
-        results = collection.find_one({"phone": '0545566779'})
+        results = collection.find_one({"phone": '0526162710'})
         login_code = (results['loginCode'])
         return login_code
 
@@ -225,8 +221,8 @@ class BaseSetups(Locators):
         phone = random.randint(1000000000, 10000000000)
         return phone
 
-    def set_page_load_timeout(self):
-        return self.driver.set_page_load_timeout(7)
+    def wait_until_ready(self):
+        time.sleep(2)
 
 
 

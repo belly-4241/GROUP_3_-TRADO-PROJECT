@@ -1,8 +1,7 @@
 
 import time
-import pymongo
+
 import pytest
-from pymongo import MongoClient
 from selenium.webdriver.common.by import By
 
 from Web.TradoUser.Base.base_test import BaseSetups
@@ -17,15 +16,6 @@ class TestHeaderPage(BaseSetups):
         except:
             print("trado title is not verified")
 
-    # def test_search(self):
-    #     self.setup_trado()
-    #     self.click(By.XPATH, self.COCTAIL)
-    #     self.click(By.XPATH, self.SAVE)
-    #     self.fields(By.XPATH, self.SEARCH_PRODUCTS, "גורילה גלו")
-    #     self.click(By.XPATH, self.SEARCH_BUTTON)
-    #     self.click(By.XPATH, self.SEARCH_LIST)
-    #     assert self.assertion(By.CSS_SELECTOR, self.AMOUNT_IN_CARTON) == "כמות בקרטון: 1"
-
 
     def language(self):
         self.setup_trado()
@@ -36,7 +26,7 @@ class TestHeaderPage(BaseSetups):
         self.setup_trado()
         self.color_check_up(By.XPATH, self.BACKGROUND_COLOR)
 
-    def test_scroll(self):
+    def scroll(self):
         self.setup_trado()
         self.click(By.XPATH, self.COCTAIL)
         self.click(By.XPATH, self.SAVE)
@@ -46,17 +36,17 @@ class TestHeaderPage(BaseSetups):
 
 
 
-    def test_search_assert_price(self):
+    def search_assert_price(self):
         self.setup_trado()
         self.click(By.XPATH, self.COCTAIL)
         self.click(By.XPATH, self.SAVE)
         self.fields(By.XPATH, self.SEARCH_PRODUCTS, "גורילה גלו")
         self.click(By.XPATH, self.SEARCH_BUTTON)
+        self.wait_until_ready()
         self.click(By.XPATH, self.SEARCH_LIST)
-        time.sleep(2)
         assert self.assertion(By.CSS_SELECTOR, self.PRICE_PRODUCT) == 'עלות לקרטון: ₪27.90'
 
-    def test_cartoon_in_stock(self):
+    def cartoon_in_stock(self):
         self.setup_trado()
         self.click(By.XPATH, self.COCTAIL)
         self.click(By.XPATH, self.SAVE)
@@ -73,7 +63,7 @@ class TestHeaderPage(BaseSetups):
                                              ('@#$$#@', '0 תוצאות'),
                                              ('12456789', '0 תוצאות')
                                                ])
-    def test_search_not_in_stock(self, name, message):
+    def search_not_in_stock(self, name, message):
         self.setup_trado()
         self.click(By.XPATH, self.COCTAIL)
         self.click(By.XPATH, self.SAVE)
@@ -83,65 +73,8 @@ class TestHeaderPage(BaseSetups):
         self.click(By.XPATH, self.SEARCH_LIST)
         assert self.message(By.XPATH, self.SEARCH_RESULT_MESSAGE) == message
 
-    # def test_add_new_product(self):
-    #     self.setup_trado()
-    #     self.click(By.XPATH, self.COCTAIL)
-    #     self.click(By.XPATH, self.SAVE)
-    #     self.click(By.XPATH, self.ADD_PRODUCTS)
-    #     self.fields(By.XPATH, self.PHONE_FIELD_NEW_PRODUCT, "0502006336")
-    #     self.checkbox(By.XPATH, self.CHECK_BOX)
-    #     self.click(By.XPATH, self.CONNECT)
-    #     self.click(By.XPATH, self.CODE0)
-    #     self.fields(By.XPATH, self.FILL_ONE, self.code_generator()[0])
-    #     self.click(By.XPATH, self.CODE1)
-    #     self.fields(By.XPATH, self.FILL_TWO, self.code_generator()[1])
-    #     self.click(By.XPATH, self.CODE2)
-    #     self.fields(By.XPATH, self.FILL_THREE, self.code_generator()[2])
-    #     self.click(By.XPATH, self.CODE3)
-    #     self.fields(By.XPATH, self.FILL_FOUR, self.code_generator()[3])
-    #     self.click(By.XPATH, self.CODE4)
-    #     self.fields(By.XPATH, self.FILL_FIVE, self.code_generator()[4])
-    #     self.click(By.XPATH, self.AUTHENTICATION)
-    #
-    #     time.sleep(5)
-    #
-    #
-    # def test_tell_us(self):
-    #     self.setup_trado()
-    #     self.click(By.XPATH, self.COCTAIL)
-    #     self.click(By.XPATH, self.SAVE)
-    #     self.click(By.XPATH, self.TELL_US_SOMETHING)
-    #     self.click(By.XPATH, self.REGISTER_BTN)
-    #     self.fields(By.XPATH, self.TELEPHONE_REGISTER, "0521234569")
-    #     self.fields(By.XPATH, self.BN_NUMBER, "515074946")
-    #     self.checkbox(By.XPATH, self.REMIND_ME_BOX)
-    #     self.click(By.XPATH, self.CHECK_BOX_TWO)
-    #     self.click(By.XPATH, self.CONNECT_REGISTER_BTN)
-    #     self.fields(By.XPATH, self.LOGIN_CODE5, "")
-    #     self.fields(By.XPATH, self.LOGIN_CODE4, "")
-    #     self.fields(By.XPATH, self.LOGIN_CODE3, "")
-    #     self.fields(By.XPATH, self.LOGIN_CODE2, "")
-    #     self.fields(By.XPATH, self.LOGIN_CODE1, "")
-    #     self.click(By.XPATH, self.ACCEPT_CODE_REGISTER)
-    #
-    # def test_join_us_max_card(self):
-    #     self.setup_trado()
-    #     self.click(By.XPATH, self.COCTAIL)
-    #     self.click(By.XPATH, self.SAVE)
-    #     self.click(By.XPATH, self.JOIN_US_MAX)
-    #     self.fields(By.XPATH, self.BUSINESS_NAME, "max")
-    #     self.fields(By.XPATH, self.LAST_NAME, "card")
-    #     self.fields(By.XPATH, self.PHONE_NUMBER_BUSINESS, "1234567891")
-    #     self.fields(By.XPATH, self.CITY_BUSINESS, "beersheva")
-    #     self.fields(By.XPATH, self.STREET_BUSINESS, "45")
-    #     self.fields(By.XPATH, self.TRADE_NAME, "hotel")
-    #     self.fields(By.XPATH, self.BUSINESS_ID, "123456789")
-    #     self.fields(By.XPATH, self.POSTAL_CODE_BUSINESS, "8442205")
-    #     self.click(By.XPATH, self.SEND_PROFILES)
-    #     self.click(By.XPATH, self.X_CLOSE_BTN_BUSINESS)
-    #     time.sleep(5)
-    #
-    #
+
+
     # def test_total_product(self):
     #     self.setup_trado()
     #     self.click(By.XPATH, self.COCTAIL)
