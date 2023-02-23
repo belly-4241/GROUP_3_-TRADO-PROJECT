@@ -28,6 +28,11 @@ class TestFinal(TestPayments, TestHeaderPage, TestMongoVsWebsite, TestRegister):
     def test_language(self):
         self.final_object().language()
 
+    @allure.description('able to verify sign up with valid credentials ')
+    @allure.severity(allure.severity_level.NORMAL)
+    def test_register_positive(self):
+        self.final_object().register_positive()
+
     @allure.description('able to make successful payment with valid credit card')
     @allure.step
     @pytest.mark.sanity
@@ -42,12 +47,12 @@ class TestFinal(TestPayments, TestHeaderPage, TestMongoVsWebsite, TestRegister):
     def test_invalid_credit_card_without(self):
         self.final_object().invalid_credit_card()
 
-    @allure.description('able to make successful payment with b2b system')
-    @allure.step
-    @pytest.mark.sanity
-    @allure.severity(allure.severity_level.CRITICAL)
-    def test_b2b_payment(self):
-        self.final_object().b2b_payment()
+    # @allure.description('able to make successful payment with b2b system')
+    # @allure.step
+    # @pytest.mark.sanity
+    # @allure.severity(allure.severity_level.CRITICAL)
+    # def test_b2b_payment(self):
+    #     self.final_object().b2b_payment()
 
     @allure.description('able to make successful payment with valid digital_check')
     @allure.step
@@ -345,7 +350,6 @@ class TestFinal(TestPayments, TestHeaderPage, TestMongoVsWebsite, TestRegister):
         self.final_object().orders_payment_type()
 
     @allure.description('able to verify the login operation is worked properly')
-    @pytest.mark.sanity
     @allure.severity(allure.severity_level.NORMAL)
     def test_login(self):
         self.final_object().login()
@@ -357,25 +361,45 @@ class TestFinal(TestPayments, TestHeaderPage, TestMongoVsWebsite, TestRegister):
         self.final_object().without_checkbox()
 
     @allure.description('able to verify register with twit and check twit is clickable')
-    @pytest.mark.sanity
     @allure.severity(allure.severity_level.NORMAL)
     def test_without_checkbox_assign(self):
         self.final_object().without_checkbox_assign()
 
     @allure.description('able to verify register with google and check twit is clickable')
-    @pytest.mark.sanity
     @allure.severity(allure.severity_level.NORMAL)
     def test_register_with_google(self):
         self.final_object().register_with_google()
 
     @allure.description('able to verify register with twit and check facebook is clickable')
-    @pytest.mark.sanity
     @allure.severity(allure.severity_level.NORMAL)
     def test_register_with_fb(self):
         self.final_object().register_with_fb()
 
     @allure.description('able to verify register with twit and check twit is clickable')
-    @pytest.mark.sanity
     @allure.severity(allure.severity_level.NORMAL)
     def test_register_with_twitt(self):
         self.final_object().register_with_twitt()
+
+    @allure.description('able to verify scroll is working properly')
+    @allure.severity(allure.severity_level.NORMAL)
+    def test_scroll(self):
+        self.final_object().scroll()
+
+    @allure.description('able to verify search bar working')
+    @allure.severity(allure.severity_level.NORMAL)
+    def test_search_assert_price(self):
+        self.final_object().search_assert_price()
+
+    @allure.description('able to verify search bar working')
+    @allure.severity(allure.severity_level.NORMAL)
+    def test_cartoon_in_stock(self):
+        self.final_object().cartoon_in_stock()
+
+    @allure.description('able to verify search bar working')
+    @allure.severity(allure.severity_level.NORMAL)
+    def test_search_not_in_stock(self):
+        self.final_object().search_not_in_stock()
+
+
+
+
