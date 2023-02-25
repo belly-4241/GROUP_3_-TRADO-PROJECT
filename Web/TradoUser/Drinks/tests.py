@@ -4,10 +4,10 @@ import pytest
 from Web.TradoUser.Drinks.pages import Drinks_page
 
 
-class TestFinal(Drinks_page):
+class Test_Drinks(Drinks_page):
 
     def final_object(self):
-        final = TestFinal()
+        final = Test_Drinks()
         return final
 
     # Drinks #

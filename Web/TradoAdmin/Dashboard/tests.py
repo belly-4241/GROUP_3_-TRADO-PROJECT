@@ -3,10 +3,10 @@ import allure
 import pytest
 
 
-class Test_Link(TestAll_pages):
+class Test_Dashbord(TestAll_pages):
 
     def project_object(self):
-        project = Test_Link()
+        project = Test_Dashbord()
         return project
 
     @allure.severity(allure.severity_level.MINOR)

@@ -8,10 +8,10 @@ from Web.TradoUser.Payment.All_Pages.payment import TestPayments
 from Web.TradoUser.Payment.All_Pages.mongodb import TestMongoVsWebsite
 
 
-class TestFinal(TestPayments, TestHeaderPage, TestMongoVsWebsite, TestRegister):
+class Test_Payment(TestPayments, TestHeaderPage, TestMongoVsWebsite, TestRegister):
 
     def final_object(self):
-        final = TestFinal()
+        final = Test_Payment()
         return final
 
     @allure.description('verify the logo is displayed on website')

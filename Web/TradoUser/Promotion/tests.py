@@ -8,10 +8,10 @@ from Web.TradoUser.Promotion.pages import Promotion_pages
 # from Trado_user.WEB.Pages.drink_pages import Drinks_page
 
 
-class TestFinal(Promotion_pages):
+class Test_Promotion(Promotion_pages):
 
     def final_object(self):
-        final = TestFinal()
+        final = Test_Promotion()
         return final
 
     # Promotions Test #

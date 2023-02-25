@@ -5,7 +5,7 @@ from pymongo import MongoClient
 from Web.TradoUser.Footer.Pages.bussiness_pages import ALL_TESTS_BUSSINESS
 
 
-class Test_RUN(ALL_TESTS_BUSSINESS):
+class Test_Bussiness(ALL_TESTS_BUSSINESS):
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
     @allure.step

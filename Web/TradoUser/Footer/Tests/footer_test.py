@@ -4,7 +4,7 @@ import pytest
 from Web.TradoUser.Footer.Pages.footer_pages import ALL_TESTS_FOOTER_LINKS
 
 
-class Test_RUN(ALL_TESTS_FOOTER_LINKS):
+class Test_Footer(ALL_TESTS_FOOTER_LINKS):
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
     @allure.step

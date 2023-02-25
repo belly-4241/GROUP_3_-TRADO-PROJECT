@@ -4,7 +4,7 @@ import pytest
 from Web.TradoUser.Footer.Pages.contact_pages import ALL_TESTS_CONTACT_US
 
 
-class Test_RUN(ALL_TESTS_CONTACT_US):
+class Test_Contact(ALL_TESTS_CONTACT_US):
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
     @allure.step
