@@ -4,6 +4,7 @@ from time import sleep
 
 import allure
 import pytest
+
 from Web.TradoUser.Canabis.pages import ALL_TESTS_CANNABIS_LINKS
 
 

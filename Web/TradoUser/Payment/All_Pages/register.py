@@ -1,3 +1,4 @@
+import allure
 import pytest
 from selenium.webdriver.common.by import By
 from Web.TradoUser.Base.base_test import BaseSetups
@@ -16,13 +17,13 @@ class TestRegister(BaseSetups):
         self.fields(By.XPATH, self.FILL_ONE, self.code_generator())
         self.click(By.XPATH, self.AUTHENTICATION)
 
-    def test_register_positive(self):
+    def register_positive(self):
         self.setup_trado()
         self.click(By.XPATH, self.COCTAIL)
         self.click(By.XPATH, self.SAVE)
         self.click(By.CSS_SELECTOR, self.CONNECTION_REGISTER)
         self.click(By.XPATH, self.REGISTER_BTN)
-        self.fields(By.XPATH, self.TELEPHONE_REGISTER, '0545566881')
+        self.fields(By.XPATH, self.TELEPHONE_REGISTER, '0526162710')
         self.fields(By.XPATH, self.BN_NUMBER, "51570246")
         self.checkbox(By.XPATH, self.REMIND_ME_BOX)
         self.click(By.XPATH, self.CONNECT_REGISTER_BTN)
@@ -31,6 +32,8 @@ class TestRegister(BaseSetups):
         self.click(By.XPATH, self.REGI_STER)
         self.click(By.XPATH, self.REGI_CLICK)
 
+    @allure.description('able to verify sign up with wrong credentials ')
+    @allure.severity(allure.severity_level.NORMAL)
     @pytest.mark.parametrize("phoneNo, BnNumber, messages", [('', '515074946', 'נא למלא שדה זה'),
                                                              ('', '', 'נא למלא שדה זה')])
     def test_negative_signup(self, phoneNo, BnNumber, messages):
@@ -45,6 +48,8 @@ class TestRegister(BaseSetups):
         self.click(By.XPATH, self.CONNECT_REGISTER_BTN)
         self.message(By.XPATH, self.ERROR_PATH)
 
+    @allure.description('able to verify sign up with different invalid inputs  ')
+    @allure.severity(allure.severity_level.NORMAL)
     @pytest.mark.parametrize("phoneNo, BnNumber, messages", [('111', '515074946',  'מס׳ טלפון לא תקין'),
                                                              ('1111111111111', '12445747',  'מס׳ טלפון לא תקין'),
                                                              ('@#$12afsdj', '48568762', 'מס׳ טלפון לא תקין'),
@@ -76,6 +81,8 @@ class TestRegister(BaseSetups):
         self.click(By.XPATH, self.CONNECT_REGISTER_BTN)
         assert self.message(By.XPATH, self.APPROVED_POLICY) == 'Please Approve Our Policy'
 
+    @allure.description('able to verify sign up with out accepting policy ')
+    @allure.severity(allure.severity_level.NORMAL)
     @pytest.mark.parametrize("phoneNo, BnNumber, messages", [('0521234567', '515074946','שדה צריך להיות ייחודיי'),
                                                              ('0521234567', '515074946', 'שדה צריך להיות ייחודיי')])
     def test_with_two_checkbox_assign(self, phoneNo, BnNumber, messages):

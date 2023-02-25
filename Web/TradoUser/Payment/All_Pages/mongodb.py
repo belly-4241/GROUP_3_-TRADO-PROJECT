@@ -1,8 +1,7 @@
 import time
 
-import pytest
 from selenium.webdriver.common.by import By
-import unittest
+
 from Web.TradoUser.Base.base_test import BaseSetups
 
 
@@ -24,7 +23,7 @@ class TestMongoVsWebsite(BaseSetups):
         self.click(By.XPATH, self.SAVE)
         self.fields(By.XPATH, self.SEARCH_PRODUCTS, "גורילה גלו")
         self.click(By.XPATH, self.SEARCH_BUTTON)
-        time.sleep(2)
+        self.wait_until_ready()
         self.click(By.XPATH, self.SEARCH_LIST)
         assert self.assertion(By.CSS_SELECTOR, self.PRICE_PRODUCT) == 'עלות לקרטון: ₪27.90'
         assert self.price_assertion_with_mongodb() == 27.9
@@ -35,18 +34,18 @@ class TestMongoVsWebsite(BaseSetups):
         self.click(By.XPATH, self.SAVE)
         self.fields(By.XPATH, self.SEARCH_PRODUCTS, 'סוכר')
         self.click(By.XPATH, self.SEARCH_BUTTON)
-        time.sleep(2)
+        self.wait_until_ready()
         self.click(By.XPATH, self.SEARCH_LIST)
         assert self.assertion(By.CSS_SELECTOR, self.CARTON_IN_STOCK) == 'קרטונים במלאי:-1'
         assert self.amount_in_stock() == 40
 
-    def product_price_inStock(self):
+    def test_product_price_inStock(self):
         self.setup_trado()
         self.click(By.XPATH, self.COCTAIL)
         self.click(By.XPATH, self.SAVE)
         self.fields(By.XPATH, self.SEARCH_PRODUCTS, "וודקה רוסקי סטנדרט")
         self.click(By.XPATH, self.SEARCH_BUTTON)
-        time.sleep(2)
+        self.wait_until_ready()
         self.click(By.XPATH, self.SEARCH_LIST)
         assert self.assertion(By.CSS_SELECTOR, self.PRICE_PRODUCT) == 'עלות לקרטון: ₪408.00'
         assert self.assertion(By.XPATH, self.PRO_QUEEN_INSTOCK) == 'קרטונים במלאי:-1'
@@ -56,7 +55,7 @@ class TestMongoVsWebsite(BaseSetups):
         self.setup_trado()
         self.click(By.XPATH, self.COCTAIL)
         self.click(By.XPATH, self.SAVE)
-        time.sleep(2)
+        self.wait_until_ready()
         self.click(By.CSS_SELECTOR, self.CONNECTION_REGISTER)
         self.fields(By.XPATH, self.PHONE_FIELD, "0502006336")
         self.checkbox(By.XPATH, self.CHECK_BOX)
@@ -85,12 +84,12 @@ class TestMongoVsWebsite(BaseSetups):
         self.click(By.XPATH, self.SEARCH_LIST)
         assert self.assertion(By.XPATH, self.QUEEN_GEL) == '₪2290.00'
 
-    def orders_status(self):
+    def test_orders_status(self):
         self.driver.get(self.HOME_ADMIN)
         self.driver.maximize_window()
         self.fields(By.XPATH, self.TELEPHONE_ADMIN, '1952222222')
         self.click(By.XPATH, self.CLICK_ADMIN)
-        time.sleep(1)
+        self.wait_until_ready()
         self.fields(By.XPATH, self.CODE_ADMIN, '1234')
         self.click(By.XPATH, self.CLICK_CODE)
         self.click(By.XPATH, self.ORDERS_ADMIN)
@@ -103,7 +102,7 @@ class TestMongoVsWebsite(BaseSetups):
         self.driver.maximize_window()
         self.fields(By.XPATH, self.TELEPHONE_ADMIN, '1952222222')
         self.click(By.XPATH, self.CLICK_ADMIN)
-        time.sleep(1)
+        self.wait_until_ready()
         self.fields(By.XPATH, self.CODE_ADMIN, '1234')
         self.click(By.XPATH, self.CLICK_CODE)
         self.click(By.XPATH, self.ORDERS_ADMIN)
