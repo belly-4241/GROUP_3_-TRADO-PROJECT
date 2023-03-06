@@ -1,9 +1,9 @@
 from Web.TradoAdmin.Department.pages import TestAll_pages
 import allure
 import pytest
-class Test_Link(TestAll_pages):
+class Test_Department(TestAll_pages):
     def project_object(self):
-        project = Test_Link()
+        project = Test_Department()
         return project
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity

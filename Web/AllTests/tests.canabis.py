@@ -1,3 +1,5 @@
+
+
 from time import sleep
 
 import allure
@@ -22,7 +24,7 @@ class Test_RUN(ALL_TESTS_CANNABIS_LINKS):
     def test_clickable_sorting_low_price(self):
         cannabis = ALL_TESTS_CANNABIS_LINKS()
         cannabis.clickable_sorting_low_price()
-        cannabis.tear_down()
+        cannabis.tear_down() 
         sleep(2)
 
     @allure.severity(allure.severity_level.MINOR)

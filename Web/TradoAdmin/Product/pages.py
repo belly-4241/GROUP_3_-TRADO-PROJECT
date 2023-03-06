@@ -706,8 +706,7 @@ class TestAll_Product(BaseSetups, Product_Locator):
         self.fields(By.XPATH, self.PROMOTION_MOD, "uhuouj23")
         self.fields(By.XPATH, self.DEPARTMEN_MOD, "rtwtuw")
         self.fields(By.XPATH, self.DAGKADGA_MOD, "wshns")
-    def clerance(self):
-        self.driver.find_element(By.XPATH, self.CARTO_AMOUNT_MOD).clear()
+
     def modify_catagory(self):
         self.setup_trado()
         self.fields(By.XPATH, self.PHONE, "1952222222")
@@ -757,6 +756,7 @@ class TestAll_Product(BaseSetups, Product_Locator):
         self.fields(By.XPATH, self.DAGKADGA_MOD, "wshns")
         self.fields(By.XPATH, self.CATAGORY_MOD, "ye3djnnd")
         self.fields(By.XPATH, self.PRODUCTTAG_MOD, "ytuhede")
+        assert self.assertion(By.XPATH, self.NAME_ASSERTION) == "נא eeלא שדה זהxxx"
     def modify_parallel(self):
         self.setup_trado()
         self.fields(By.XPATH, self.PHONE, "1952222222")
@@ -782,6 +782,7 @@ class TestAll_Product(BaseSetups, Product_Locator):
         self.fields(By.XPATH, self.DAGKADGA_MOD, "wshns")
         self.fields(By.XPATH, self.CATAGORY_MOD, "ye3djnnd")
         self.fields(By.XPATH, self.PRODUCTTAG_MOD, "ytuhede")
+        assert self.assertion(By.XPATH, self.NAME_ASSERTION) == "נא eeלא שדה זהxxx"
     def next2_button(self):
         self.setup_trado()
         self.fields(By.XPATH, self.PHONE, "1952222222")

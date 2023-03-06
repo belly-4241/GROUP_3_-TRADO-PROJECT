@@ -629,6 +629,7 @@ class TestAll_pages(BaseSetups):
         self.click(By.XPATH, self.SEND)
         self.click(By.XPATH, self.DOT_CLICK)
         self.click(By.XPATH, self.DOWNLOAD)
+        assert self.assertion(By.XPATH, self.NAME_ASSERTION) == "נא eeלא שדה זהxxx"
 
    def order_48(self):
         self.setup_trado()
@@ -672,6 +673,7 @@ class TestAll_pages(BaseSetups):
         self.click(By.XPATH, self.RECIEVED)
         self.click(By.XPATH, self.PHONE_NUMBER)
         self.fields(By.XPATH, self.SEARCH, "0502006336")
+        assert self.assertion(By.XPATH, self.NAME_ASSERTION) == "נא eeלא שדה זהxxx"
 
 
    def order_51(self):
@@ -731,6 +733,7 @@ class TestAll_pages(BaseSetups):
         self.click(By.XPATH, self.READY)
         self.click(By.XPATH, self.PHONE_NUMBER)
         self.fields(By.XPATH, self.SEARCH, "0535220876")
+        assert self.assertion(By.XPATH, self.NAME_ASSERTION) == "נא eeלא שדה זהxxx"
 
 
    def order_55(self):

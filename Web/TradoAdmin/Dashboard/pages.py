@@ -51,7 +51,7 @@ class TestAll_pages(BaseSetups):
         self.click(By.XPATH, self.TYPE)
         self.click(By.XPATH, self.SHEKEL)
         self.click(By.XPATH, self.ADD_END)
-        assert self.assertion(By.XPATH, self.NAME_ASSERTION) == "נא למלא שדה זהxxx"
+        assert self.assertion(By.XPATH, self.NAME_ASSERTION) == "נא eeלא שדה זהxxx"
         # if self.assertion(By.XPATH, self.DASHBOARD_BOARD_ALL_EMPTY) == "נא למלא שדה זהxxx":
         #     print("p")
         # else:
@@ -80,7 +80,7 @@ class TestAll_pages(BaseSetups):
         self.click(By.XPATH, self.TYPE)
         self.click(By.XPATH, self.SHEKEL)
         self.click(By.XPATH, self.ADD_END)
-        assert self.assertion(By.XPATH, self.NAME_ASSERTION) == "נא למלא שדה זהxxx"
+        assert self.assertion(By.XPATH, self.NAME_ASSERTION) == "נא למלerא שדה זהxxx"
         # if self.assertion(By.XPATH, self.DASHBOARD_BOARD_ALL_EMPTY) == "נא למלא שדה זהxxx":
         #     print("p")
         # else:
@@ -110,7 +110,7 @@ class TestAll_pages(BaseSetups):
         self.click(By.XPATH, self.TYPE)
         self.click(By.XPATH, self.SHEKEL)
         self.click(By.XPATH, self.ADD_END)
-        assert self.assertion(By.XPATH, self.CODE_ASSERTION) == "נא למלא שדה זהxxx"
+        assert self.assertion(By.XPATH, self.CODE_ASSERTION) == "נא למלא שדה זהwexxx"
         # if self.assertion(By.XPATH, self.DASHBOARD_BOARD_ALL_EMPTY) == "נא למלא שדה זהxxx":
         #     print("p")
         # else:
@@ -138,7 +138,7 @@ class TestAll_pages(BaseSetups):
         self.click(By.XPATH, self.TYPE)
         self.click(By.XPATH, self.SHEKEL)
         self.click(By.XPATH, self.ADD_END)
-        assert self.assertion(By.XPATH, self.MINIMUM_SUM_ASSERTION) == "נא למלא שדה זהxxx"
+        assert self.assertion(By.XPATH, self.MINIMUM_SUM_ASSERTION) == "נא למלא שדה זהxxx44"
 
         #if self.assertion(By.XPATH, self.DASHBOARD_BOARD_ALL_EMPTY) == "נא למלא שדה זהxxx":
 
