@@ -22,6 +22,7 @@ class  order_locator_click():
     FINISHED = "//span[contains(text(),'מוכנה')]"
     DOT_CLICK = "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/span[1]/i[1]"
     DOWNLOAD = "//span[contains(text(),'ייצוא')]"
+    DOWNLOAD_RECEVIED = "//span[contains(text(),'ייצוא')]"
     SEARCH = "//body/div[@id='root']/div[1]/div[2]/main[1]/div[2]/div[1]/div[2]/div[1]/div[1]/span[1]/span[1]/div[1]/input[1]"
 
 

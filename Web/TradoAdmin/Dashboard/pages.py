@@ -28,6 +28,7 @@ class TestAll_pages(BaseSetups):
         self.click(By.XPATH, self.ADD_END)
 
 
+
     def dashboard_1(self):
         self.setup_trado()
         self.fields(By.XPATH, self.PHONE, "1952222222")
